@@ -27,3 +27,4 @@ Spring Boot for [腾讯云对象存储服务](http://wiki.qcloud.com/wiki/COS%E4
 ### 参考
 
 * COS产品介绍:  http://www.qcloud.com/wiki/COS%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D
+* COS Java SDK: https://github.com/linux-china/qcloud-cos-java-sdk
