@@ -2,7 +2,7 @@ package org.mvnsearch.boot.cos;
 
 import com.qcloud.cos.api.BucketOperation;
 import com.qcloud.cos.api.CosCloud;
-import org.mvnsearch.boot.cos.impl.FileStorageServiceOssImpl;
+import org.mvnsearch.boot.cos.impl.FileStorageServiceCosImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -31,6 +31,6 @@ public class CosAutoConfiguration {
 
     @Bean
     public FileStorageService cosFileStorageService(CosCloud cosCloud) {
-        return new FileStorageServiceOssImpl(cosCloud, properties);
+        return new FileStorageServiceCosImpl(cosCloud, properties);
     }
 }
