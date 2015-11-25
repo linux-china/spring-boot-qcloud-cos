@@ -1,7 +1,7 @@
 package org.mvnsearch.boot.cos.impl;
 
 import com.qcloud.cos.api.BucketOperation;
-import com.qcloud.cos.api.CosCloud;
+import com.qcloud.cos.api.CosClient;
 import org.mvnsearch.boot.cos.CosProperties;
 import org.mvnsearch.boot.cos.FileStorageService;
 
@@ -30,8 +30,8 @@ public class FileStorageServiceCosImpl implements FileStorageService {
      */
     private BucketOperation bucketOperation;
 
-    public FileStorageServiceCosImpl(CosCloud cosCloud, CosProperties cosProperties) {
-        this.bucketOperation = cosCloud.getBucketOperation(cosProperties.getBucketName());
+    public FileStorageServiceCosImpl(CosClient cosClient, CosProperties cosProperties) {
+        this.bucketOperation = cosClient.getBucketOperation(cosProperties.getBucketName());
     }
 
     /**
